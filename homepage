@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGESOFPAGE</title>
+    <link rel="stylesheet" href="project1.css"><!--external css-->
+    <style>p{
+        color: chocolate; 
+        background-color: blanchedalmond;
+        font-size: 20px;
+    }
+        </style>
+      <style>
+        body{background-repeat: NONE;
+            
+        }
+      </style> <!--internal css-->
+    
+</head>
+<body>
+    <header></header><nav><img src="HCJ.jpg" alt="error" width="50px" height="50px"><H1>TECH-LEARN</H1></header></nav>
+    <nav><a href="#">Home</a>&nbsp;&nbsp;&nbsp;<a href="#">About</a><a href=""></a>&nbsp;&nbsp;&nbsp;<a href="#">Overview</a>&nbsp;&nbsp;&nbsp;<a href="#">Privacy</a>&nbsp;&nbsp;&nbsp;<a href="#">Contact</a></nav>
+    <marquee>To learn is to gain new knowledge or skills through study, practice or experience.Learning is the process of acquiring new understanding, knowledge, behaviors, skills, values, attitudes, and preferences. ></marquee>
+    <nav><a href="#">HTML</a><br><a href="#">CSS</a><br><a href="#">JAVASCIRPT</a></nav>
+    
+    <section>
+        <h4 style="color: aquamarine;"><u>HTML</u></h4><!--inline css-->
+        <center><img src="htm.jpg" alt="error"></center>
+        <P>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. <br>It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+
+            Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web. <br> HTML describes the structure of a web page semantically and originally included cues for its appearance.
+            
+            HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items.</P>
+    </section>
+    <section>
+        <h4 style="color: aqua;"><u>CSS</u></h4>
+    <center><img src="css.jpg" alt="error"></center>
+        <P>Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).<br> CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</P>
+    </section>
+    <section>
+        <h4 style="color: blanchedalmond;"><u>JAVASCIPT</u></h4>
+        <center><img src="java.png" alt="error"></center>
+        <p>JavaScript is the most powerful and versatile web programming language. It is used for making the websites interactive. JavaScript helps us add features like animations, interactive forms and dynamic content to web pages.
+
+            In this JavaScript Tutorial, we’ll learn all the basics to advanced topics and concepts of JavaScript. This JavaScript tutorial includes operators, control flow, functions, objects, Asynchronous JavaScript, Events, DOM manipulation, OOPs, Closures, Event loops etc.</p>
+    </section>
+
+    
+    <footer>Copyright @ all are reserved</footer>
+
+</body>
+</html>
