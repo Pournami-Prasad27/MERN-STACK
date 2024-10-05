@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.mydiv{
+display: flex;
+flex-direction: column;
+height: 100vh;
+}
+.header{
+    background-color: cadetblue;
+    color: bisque;
+    text-align: center;
+    padding: 20px;
+}
+.nav{
+    background-color: chocolate;
+    color: burlywood;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+
+}
+.nav a{
+    color: aqua;
+    text-decoration: none;
+}
+.content{
+    display: flex;
+    flex: 1;
+    background-color: cornflowerblue;
+    padding:50px ;
+    word-spacing: 3px;
+    
+}
+.sidebar{
+    background-color: darkgreen;
+    color: crimson;
+    width: 200px;
+    padding: 20px;word-spacing: 2px;
+    text-align: justify;
+}
+.main{
+    flex=1;
+    background-color: cornsilk;
+    color: brown;
+    padding: 20px;
+    width: 500px;
+    text-align: justify;
+}
+.footer{
+    background-color: darkolivegreen;
+    color: crimson;
+    text-align: center;
+    padding: 20px;
+}
