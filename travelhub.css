@@ -1,0 +1,54 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.bgimage{
+    height: 100vh;
+    background-image: url(pic1.jpeg);
+    position:relative
+    width:100vw;
+    background: #0000000;
+}
+
+.maintext{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.maintext > h1{
+    font-size: 120px;
+    -webkit-text-stroke: 3px cyan;
+    color: transparent;
+
+    margin: 0px;
+    letter-spacing: 5px;
+}
+.maintext > h3{
+    font-size: 50px;
+    margin: 20px;
+    font-weight: 400;
+    color: white;
+
+}
+.two{
+    margin-right: 50px;
+}
+.acc{
+    text-decoration:none;
+    color: wheat;
+    background: color #3742fa;
+    padding: 7px 15px;
+    margin: auto 15px auto 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+}
+.logo{
+    position: relative;
+    left: 50px;
+    top: -25px;
+}
