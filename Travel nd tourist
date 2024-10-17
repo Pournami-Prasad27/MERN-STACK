@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Welcome to Travel & Tourism</h1>
+        <p>Explore the world with us!</p>
+        <button>Book Now</button>
+    </section>
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination">
+            <img src="image1.jpg" alt="Destination 1">
+            <h3>Paris, France</h3>
+            <p>Experience the City of Love</p>
+        </div>
+        <div class="destination">
+            <img src="image2.jpg" alt="Destination 2">
+            <h3>Rome, Italy</h3>
+            <p>Discover ancient history</p>
+        </div>
+        <div class="destination">
+            <img src="image3.jpg" alt="Destination 3">
+            <h3>Bali, Indonesia</h3>
+            <p>Relax on beautiful beaches</p>
+        </div>
+    </section>
+    <section id="packages">
+        <h2>Travel Packages</h2>
+        <div class="package">
+            <h3>Weekend Getaway</h3>
+            <p>Starting from $500</p>
+            <ul>
+                <li>2 nights accommodation</li>
+                <li>Breakfast and dinner</li>
+                <li>Sightseeing tour</li>
+            </ul>
+        </div>
+        <div class="package">
+            <h3>Family Vacation</h3>
+            <p>Starting from $1,500</p>
+            <ul>
+                <li>5 nights accommodation</li>
+                <li>Breakfast, lunch, and dinner</li>
+                <li>Guided tours</li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 Travel & Tourism</p>
+    </footer>
+</body>
+</html>
+```
+
+*CSS (in style.css file):*
+
+```
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+#home {
+    background-image: url('background.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.destination {
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+}
+
+.destination img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
