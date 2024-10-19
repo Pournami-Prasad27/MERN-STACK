@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript event and event hanlders</title>
+</head>
+<body>
+    <h1 id="pageTitle">Click On Me</h1>
+    <button id="myButton">HOVER OVER ME</button>
+    <script>
+        //event handlers function
+        function handleClick(){
+            alert("you clicked");//display
+        }
+        function handleMouseOver(){
+            alert("Mouse Over");
+        }
+        function handleMouseOut(){
+            console.log('Mouse out of the button');
+           
+        }
+        function handlePageLoad(){
+            console.log("Page is fully loaded");
+        }
+        //get ele and attach event listner
+        let pageTitle=document.getElementById('pageTitle');
+        let button=document.getElementById('myButton');
+        pageTitle.addEventListener("click",handleClick);
+        button.addEventListener("mouseover",handleMouseOver);
+        button.addEventListener("mouseout",handleMouseOut);
+
+
+        ///window on load event
+        window.onload=handlePageLoad;
+    </script>
+    
+</body>
+</html>
