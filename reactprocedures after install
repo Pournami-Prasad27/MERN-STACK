@@ -1,0 +1,48 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\ASAP\Desktop\ROW> npm create vite
+Need to install the following packages:
+create-vite@5.5.3
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite
+
+√ Project name: ... ReactProject
+√ Package name: ... reactproject
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+
+Scaffolding project in C:\Users\ASAP\Desktop\ROW\ReactProject...
+
+Done. Now run:
+
+  cd ReactProject
+  npm install
+  npm run dev
+
+npm notice
+npm notice New minor version of npm available! 10.8.2 -> 10.9.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.0
+npm notice To update run: npm install -g npm@10.9.0
+npm notice
+PS C:\Users\ASAP\Desktop\ROW> cd ReactProject
+PS C:\Users\ASAP\Desktop\ROW\ReactProject>
+PS C:\Users\ASAP\Desktop\ROW\ReactProject> npm run dev
+
+> reactproject@0.0.0 dev
+> vite
+
+
+  VITE v5.4.9  ready in 152 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+Terminate batch job (Y/N)? y
+PS C:\Users\ASAP\Desktop\ROW\ReactProject> code .
+
