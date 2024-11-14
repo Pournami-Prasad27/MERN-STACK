@@ -1,0 +1,171 @@
+Button
+
+import React from 'react';
+
+const Button = ({ label, onClick, style, disabled = false }) => {
+  return (
+    <button onClick={onClick} style={style} disabled={disabled}>
+      {label}
+    </button>
+  );
+};
+
+export default Button;
+
+
+CARD
+import React from 'react';
+
+const Card = ({ children, style }) => (
+  <div style={{
+    padding: '20px',
+    margin: '10px',
+    border: '1px solid #ddd',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    ...style
+  }}>
+    {children}
+  </div>
+);
+
+export default Card;
+
+
+CHECKBOX
+import React from 'react';
+
+const Checkbox = ({ label, checked, onChange }) => (
+  <label style={{ display: 'flex', alignItems: 'center' }}>
+    <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} />
+    <span style={{ marginLeft: '8px' }}>{label}</span>
+  </label>
+);
+
+export default Checkbox;
+INPUT
+import React, { useState } from 'react';
+
+const Input = ({ value, onChange, placeholder = "Enter text", type = "text" }) => {
+  const [inputValue, setInputValue] = useState(value || '');
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+    onChange && onChange(e.target.value);
+  };
+
+  return (
+    <input
+      type={type}
+      value={inputValue}
+      onChange={handleChange}
+      placeholder={placeholder}
+    />
+  );
+};
+
+export default Input;
+MODAL
+import React from 'react';
+
+const Modal = ({ isOpen, onClose, children }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div style={{
+      position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center'
+    }}>
+      <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '8px', maxWidth: '500px', width: '100%' }}>
+        <button onClick={onClose} style={{ float: 'right' }}>Close</button>
+        {children}
+      </div>
+    </div>
+  );
+};
+
+export default Modal;
+
+
+
+
+ROUTERMAINS
+import React from 'react'
+import { BrowserRouter,Routes,Route,Link } from 'react-router-dom'
+import {Button} from '../Components'
+import {Card} from'../Components'
+import Checkbox from '../Components/Checkbox'
+import Input from '../Components/Input'
+import Modal from '../Components/Modal'
+
+const Routermains = () => {
+  return (
+    <BrowserRouter>
+    <nav>
+        <ul>
+            <li><Link to="/Button">Button</Link></li>
+            <li><Link to="/Card">Card</Link></li>
+            <li><Link to="/Checkbox">Checkbox</Link></li>
+            <li><Link to="/Input">Input</Link></li>
+            <li><Link to="/Modal">Modal</Link></li>
+        </ul>
+    </nav>
+    <Routes>
+    <Route path='/Button' element={<Button/>}/>
+    <Route path='/Card' element={<Card/>}/>
+    <Route path='/Checkbox' element={<Checkbox/>}/>
+    <Route path='/Input' element={<Input/>}/>
+    <Route path='/Modal' element={<Modal/>}/>
+    </Routes>
+   </BrowserRouter>
+  )
+}
+export default Routermains;
+
+
+
+APP,JSX
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Button from './Components/Button'
+import Card from './Components/Card'
+import Checkbox from './Components/Checkbox'
+import Input from './Components/Input'
+import Modal from './Components/Modal'
+
+function App() {
+  const [inputValue, setInputValue] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  return (
+    <div>
+      <h1>Reusable Components Demo</h1>
+
+      <Card>
+        <h2>Button Component</h2>
+        <Button label="Show Modal" onClick={() => setShowModal(true)} />
+      </Card>
+
+      <Card>
+        <h2>Input Component</h2>
+        <Input value={inputValue} onChange={setInputValue} placeholder="Type something..." />
+      </Card>
+
+      <Card>
+        <h2>Checkbox Component</h2>
+        <Checkbox label="Accept Terms" checked={isChecked} onChange={setIsChecked} />
+      </Card>
+
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+        <h2>Modal Content</h2>
+        <p>This is a modal with reusable content.</p>
+        <Button label="Close" onClick={() => setShowModal(false)} />
+      </Modal>
+    </div>
+  );
+}
+
+export default App;
