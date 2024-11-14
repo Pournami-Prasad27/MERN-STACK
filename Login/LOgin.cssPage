@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: cadetblue;
+}
+.login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import './Login.css';
+
+const Login = ({ onLogin, buttonLabel = "Login" }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  // Handle changes in the email and password inputs
+  const handleEmailChange = (e) => setEmail(e.target.value);
+  const handlePasswordChange = (e) => setPassword(e.target.value);
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email && password) {
+      onLogin({ email, password });
+      setError(''); // Clear error on successful submit
+    } else {
+      setError('Please enter both email and password');
+    }
+  };
+
+  // Clear error on component load or email/password change
+  useEffect(() => {
+    if (email || password) {
+      setError('');
+    }
+  }, [email, password]);
+
+  return (
+    <div className="login-container">
+      <h2>{buttonLabel}</h2>
+      <form onSubmit={handleSubmit}>
+        {error && <p className="error">{error}</p>}
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+            required
+          />
+        </div>
+        <button type="submit">{buttonLabel}</button>
+      </form>
+    </div>
+  );
+};
+
+// Define prop types for validation
+Login.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+  buttonLabel: PropTypes.string,
+};
+
+export default Login;
